@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]> <html class="ie6 lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 6 ]> <html class="lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 7 ]> <html class="lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 8 ]> <html class="lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 9 ]> <html class="lte_ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单</title>
+    <link href="./static/libs/bootstrap2.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="./static/libs/jquery1.12/jquery1.12.4.min.js"></script>
+    <script src="./static/libs/bootstrap2.3.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h2>表单</h2>
+    <div>
+        <form class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">邮箱</label>
+                <div class="controls">
+                    <input type="text" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputPassword">密码</label>
+                <div class="controls">
+                    <input type="password" id="inputPassword" placeholder="Password">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">内容</label>
+                <div class="controls">
+                    <textarea rows="3"></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">下拉</label>
+                <div class="controls">
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">分类</label>
+                <div class="controls">
+                    <label class="checkbox inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> 分类1
+                    </label>
+                    <label class="checkbox inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> 分类2
+                    </label>
+                    <label class="checkbox inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 分类3
+                    </label>
+                </div>
+            </div>
+            <div class="control-group text-center">
+                <button type="submit" class="btn">登录</button>
+                <button type="btn" class="btn">退出</button>
+            </div>
+        </form>
+        <p>
+            <a href="https://v2.bootcss.com/base-css.html?#forms">具体使用方法</a>
+        </p>
+    </div>  
+</body>
+
+</html>

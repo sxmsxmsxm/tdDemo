@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]> <html class="ie6 lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 6 ]> <html class="lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 7 ]> <html class="lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 8 ]> <html class="lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 9 ]> <html class="lte_ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>附件上传</title>
+    <link rel="stylesheet" type="text/css" href="./static/libs/webuploader/webuploader.css">
+    <script type="text/javascript" src="./static/libs/jquery1.12/jquery1.12.4.min.js"></script>
+    <script type="text/javascript" src="./static/libs/webuploader/webuploader.js"></script>
+</head>
+
+<body>
+    <div id="uploader" class="wu-example">
+        
+        <!-- 上传文件的 -->
+        <!-- <div id="thelist" class="uploader-list"></div>
+        <div class="btns">
+            <div id="picker">选择文件</div>
+            <button id="ctlBtn" class="btn btn-default">开始上传</button>
+        </div> -->
+       
+        <!--上传图片的-->
+        <div id="uploader-demo">
+            
+            <div id="fileList" class="uploader-list"></div>
+            <div id="filePicker">选择图片</div>
+        </div>
+    </div>
+    <p>
+        <a href="http://fex.baidu.com/webuploader/doc/index.html">具体使用方法</a>
+    </p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            // //上传文件的
+            // var uploader = WebUploader.create({
+
+            //     // swf文件路径
+            //     // swf: BASE_URL + '/js/Uploader.swf',
+
+            //     // 文件接收服务端。
+            //     server: 'http://webuploader.duapp.com/server/fileupload.php',
+
+            //     // 选择文件的按钮。可选。
+            //     // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+            //     pick: '#picker',
+
+            //     // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+            //     resize: false
+            // });
+
+
+            // // 文件上传过程中创建进度条实时显示。
+            // uploader.on('uploadProgress', function (file, percentage) {
+            //     var $li = $('#' + file.id),
+            //         $percent = $li.find('.progress .progress-bar');
+
+            //     // 避免重复创建
+            //     if (!$percent.length) {
+            //         $percent = $('<div class="progress progress-striped active">' +
+            //             '<div class="progress-bar" role="progressbar" style="width: 0%">' +
+            //             '</div>' +
+            //             '</div>').appendTo($li).find('.progress-bar');
+            //     }
+
+            //     $li.find('p.state').text('上传中');
+
+            //     $percent.css('width', percentage * 100 + '%');
+            // });
+
+
+            // 初始化上传图片的
+            var uploader = WebUploader.create({
+
+                // 选完文件后，是否自动上传。
+                auto: true,
+
+                // swf文件路径
+                // swf: BASE_URL + '/js/Uploader.swf',
+
+                // 文件接收服务端。
+                server: 'http://webuploader.duapp.com/server/fileupload.php',
+
+                // 选择文件的按钮。可选。
+                // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+                pick: '#filePicker',
+
+                // 只允许选择图片文件。
+                accept: {
+                    title: 'Images',
+                    extensions: 'gif,jpg,jpeg,bmp,png',
+                    mimeTypes: 'image/*'
+                }
+            });
+        });        
+    </script>
+</body>
+
+</html>

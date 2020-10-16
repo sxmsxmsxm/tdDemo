@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]> <html class="ie6 lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 6 ]> <html class="lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 7 ]> <html class="lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 8 ]> <html class="lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 9 ]> <html class="lte_ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>最大表格示例</title>
+    <link href="./static/libs/bootstrap2.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./static/css/basic.css" rel="stylesheet" type="text/css">
+    <script src="./static/libs/jquery1.12/jquery1.12.4.min.js"></script>
+    <script src="./static/libs/bootstrap2.3.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h2 class="big3">最大表格示例</h2>
+    <table class="TableList" width="95%" align="center">
+        <thead class="TableHeader">
+            <tr>
+                <td nowrap="" align="center">发布人</td>
+                <td nowrap="" align="center">类型</td>
+                <td nowrap="" align="center" onclick="order_by('SUBJECT','1');" style="cursor:hand;">
+                    <u>标题</u>
+                </td>
+                <td nowrap="" align="center">发布范围</td>
+                <td nowrap="" align="center" onclick="order_by('SEND_TIME','0');" style="cursor:hand;">
+                    <u>生效日期</u>
+                    <img border="0" src="/static/images/arrow_down.gif" width="11" height="10">
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="TableLine1">
+                <td nowrap="" width="120">
+                    <img src="/inc/attach_old.php?ATTACHMENT_ID=avatar&amp;ATTACHMENT_NAME=1.jpg&amp;DIRECT_VIEW=1&amp;r=12941"
+                        width="16" height="16">
+                    <u title="部门：综合管理部" style="cursor:hand">系统管理员</u>
+                </td>
+                <td nowrap="" align="center">通知</td>
+                <td>
+                    <a href="javascript:open_notify('18','FIELD=&amp;bySendTime=&amp;ASC_DESC=');" title="">
+                        <font color="">这是一个带图片的</font>
+                    </a>
+                </td>
+                <td style="cursor:hand" title="部门：总经办,综合管理部,人力资源部,财务部,行政部,市场营销部,市场部,品牌部,网络营销中心,商务中心,销售部,北京销售部,销售一组,销售二组,销售三组,销售协作组,上海销售部,研发部,产品部,开发一部,开发二部,质量保证部,设计部,项目部,项目一部,项目二部,生产部,采购部,生产一部,生产二部,质检部,">
+                    <font color="#0000FF">
+                        <b>部门：</b>
+                    </font>总经办,综合管理部,人...
+                    <br>
+                </td>
+                <td nowrap="" align="center">2018-04-12</td>
+            </tr>
+            <tr class="TableLine2">
+                <td nowrap="" width="120">
+                    <img src="/inc/attach_old.php?ATTACHMENT_ID=avatar&amp;ATTACHMENT_NAME=1.jpg&amp;DIRECT_VIEW=1&amp;r=30259"
+                        width="16" height="16">
+                    <u title="部门：综合管理部" style="cursor:hand">系统管理员</u>
+                </td>
+                <td nowrap="" align="center"></td>
+                <td>
+                    <a href="javascript:open_notify('16','FIELD=&amp;bySendTime=&amp;ASC_DESC=');" title="">
+                        <font color="">这也是一个测试的</font>
+                    </a>
+                </td>
+                <td style="cursor:hand" title="部门：全体部门">
+                    <font color="#0000FF">
+                        <b>部门：</b>
+                    </font>全体部门
+                    <br>
+                </td>
+                <td nowrap="" align="center">2017-11-29</td>
+            </tr>
+            <tr class="TableLine1">
+                <td nowrap="" width="120">
+                    <img src="/inc/attach_old.php?ATTACHMENT_ID=avatar&amp;ATTACHMENT_NAME=1.jpg&amp;DIRECT_VIEW=1&amp;r=9939"
+                        width="16" height="16">
+                    <u title="部门：综合管理部" style="cursor:hand">系统管理员</u>
+                </td>
+                <td nowrap="" align="center"></td>
+                <td>
+                    <a href="javascript:open_notify('15','FIELD=&amp;bySendTime=&amp;ASC_DESC=');" title="">
+                        <font color="">已生效未发布</font>
+                    </a>
+                </td>
+                <td style="cursor:hand" title="部门：全体部门">
+                    <font color="#0000FF">
+                        <b>部门：</b>
+                    </font>全体部门
+                    <br>
+                </td>
+                <td nowrap="" align="center">2017-11-29</td>
+            </tr>
+            <tr class="TableLine2">
+                <td nowrap="" width="120">
+                    <img src="/static/images/avatar/1.gif" width="16" height="16">
+                    <u title="部门：综合管理部/人力资源部" style="cursor:hand">刘娜</u>
+                </td>
+                <td nowrap="" align="center">通知</td>
+                <td>
+                    <a href="javascript:open_notify('8','FIELD=&amp;bySendTime=&amp;ASC_DESC=');" title="">
+                        <font color="">关于员工福利的通知</font>
+                    </a>
+                </td>
+                <td style="cursor:hand" title="部门：全体部门">
+                    <font color="#0000FF">
+                        <b>部门：</b>
+                    </font>全体部门
+                    <br>
+                </td>
+                <td nowrap="" align="center">2017-07-18</td>
+            </tr>
+            <tr class="TableLine1">
+                <td nowrap="" width="120">
+                    <img src="/static/images/avatar/1.gif" width="16" height="16">
+                    <u title="部门：综合管理部" style="cursor:hand">王云</u>
+                </td>
+                <td nowrap="" align="center">通知</td>
+                <td>
+                    <a href="javascript:open_notify('1','FIELD=&amp;bySendTime=&amp;ASC_DESC=');" title="">
+                        <font color="">“大连行”夏游活动日程安排</font>
+                    </a>
+                </td>
+                <td style="cursor:hand" title="部门：全体部门">
+                    <font color="#0000FF">
+                        <b>部门：</b>
+                    </font>全体部门
+                    <br>
+                </td>
+                <td nowrap="" align="center">2017-07-18</td>
+            </tr>
+            <tr class="TableLine2">
+                <td nowrap="" width="120">
+                    <img src="/static/images/avatar/1.gif" width="16" height="16">
+                    <u title="部门：综合管理部" style="cursor:hand">王云</u>
+                </td>
+                <td nowrap="" align="center">通报</td>
+                <td>
+                    <a href="javascript:open_notify('2','FIELD=&amp;bySendTime=&amp;ASC_DESC=');" title="">
+                        <font color="">关于表扬销售部朱红拾金不昧行为的通报</font>
+                    </a>
+                </td>
+                <td style="cursor:hand" title="部门：全体部门">
+                    <font color="#0000FF">
+                        <b>部门：</b>
+                    </font>全体部门
+                    <br>
+                </td>
+                <td nowrap="" align="center">2017-07-18</td>
+            </tr>
+            <tr class="TableLine1">
+                <td nowrap="" width="120">
+                    <img src="/static/images/avatar/1.gif" width="16" height="16">
+                    <u title="部门：综合管理部" style="cursor:hand">王云</u>
+                </td>
+                <td nowrap="" align="center">通知</td>
+                <td>
+                    <a href="javascript:open_notify('10','FIELD=&amp;bySendTime=&amp;ASC_DESC=');" title="">
+                        <font color="">关于公司内部人员调整的通知</font>
+                    </a>
+                </td>
+                <td style="cursor:hand" title="部门：全体部门">
+                    <font color="#0000FF">
+                        <b>部门：</b>
+                    </font>全体部门
+                    <br>
+                </td>
+                <td nowrap="" align="center">2017-05-15</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

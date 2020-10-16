@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]> <html class="ie6 lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 6 ]> <html class="lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 7 ]> <html class="lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 8 ]> <html class="lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 9 ]> <html class="lte_ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>两列的布局</title>
+    <link href="./static/libs/bootstrap2.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./static/libs/jstree/themes/default/style.css" rel="stylesheet" type="text/css">
+    <link href="./static/css/index.css" rel="stylesheet" type="text/css">
+    <script src="./static/libs/jquery1.12/jquery1.12.4.min.js"></script>
+    <script src="./static/libs/bootstrap2.3.2/js/bootstrap.min.js"></script>
+    <script src="./static/libs/jstree/jstree.min.js"></script>
+    <!-- <script src="./static/libs/jstree/jstree.search.js"></script> -->
+</head>
+
+<body>
+    <div id="col_left">
+        <form class="form-search" style="margin: 10px">
+            <div class="input-append">
+                <input type="text" class="search-query" style="width:100px">
+                <button type="submit" class="btn">搜索</button>
+            </div>
+        </form>
+        <div id="tree"></div>
+    </div>
+    <div id="col_main">
+        <a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal">查看模态框</a>
+        <!-- Modal -->
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">模态标题</h3>
+            </div>
+            <div class="modal-body">
+                <p>模态内容随便填写</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                <button class="btn btn-primary">保存</button>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <a href="https://blog.csdn.net/qq_24472595/article/details/70053863">jstree具体使用方法</a>
+        </p>
+    </div>
+    
+    <script>
+        $(document).ready(function () {
+            $('#tree').jstree({
+                'core' : {
+                    "themes" : { "stripes" : true },
+                    'plugins': ['checkbox','types','themes','search'],
+                    'data' : [
+                        {
+                            "id" : "1",
+                            "text" : "根目录1",
+                            "state" : { "opened" : true },
+                            "children" : [
+                                {
+                                    "id" : "1_1",
+                                    "text" : "子目录1",
+                                },
+                                {   
+                                    "id" : "1_2",
+                                    "text" : "子目录2", 
+                                },
+                                {
+                                    "id" : "1_3",
+                                    "text" : "子目录3",
+                                },
+                                {   
+                                    "id" : "1_4",
+                                    "text" : "子目录4", 
+                                },
+                                {
+                                    "id" : "1_5",
+                                    "text" : "子目录5",
+                                },
+                                {   
+                                    "id" : "1_6",
+                                    "text" : "子目录6", 
+                                },
+                                {
+                                    "id" : "1_7",
+                                    "text" : "子目录7",
+                                },
+                                {   
+                                    "id" : "1_8",
+                                    "text" : "子目录8", 
+                                }
+                            ]
+                        },
+                        {
+                            "id" : "2",
+                            "text" : "根目录2",
+                            "state" : { "opened" : false },
+                        }
+                    ]
+                }
+            });
+        });
+
+        //tree change时事件  
+        $('#tree').on("changed.jstree", function (e, data) {  
+            console.log("选中的节点是:");  
+            console.log(data.node.id);               //选择的node id  
+            console.log(data.node.text);             //选择的node text          
+        });  
+    </script>
+</body>
+
+</html>

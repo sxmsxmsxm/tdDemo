@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]> <html class="ie6 lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 6 ]> <html class="lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 7 ]> <html class="lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 8 ]> <html class="lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 9 ]> <html class="lte_ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>通达OA部分页面示例</title>
+    <link href="./static/libs/bootstrap2.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./static/libs/bootstrap2.3.2/tag/bootstrap.tag.css" rel="stylesheet" type="text/css">
+    <link href="./static/css/index.css" rel="stylesheet" type="text/css">
+    <script src="./static/libs/jquery1.12/jquery1.12.4.min.js"></script>
+    <script src="./static/libs/bootstrap2.3.2/js/bootstrap.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="head">
+        <div id="infobar" class="pull-right">
+            <i class="icon-download-alt icon-white" data-placement="bottom" data-toggle="tooltip" data-original-title="Flash下载"></i>
+            <i class="icon-user icon-white" data-placement="bottom" data-toggle="tooltip" data-original-title="用户"></i>
+            <i class="icon-home icon-white" data-placement="bottom" data-toggle="tooltip" data-original-title="首页"></i>
+            <i class="icon-off icon-white" data-placement="left" data-toggle="tooltip" data-original-title="退出"></i>
+        </div>
+        <div id="logo" class="pull-left">通达OA部分页面示例</div>
+        <div id="taskbar"></div>
+    </div>
+    <!-- 左侧菜单 -->
+    <div id="left">
+        <ul class="menu-wrap unstyled">
+            <li class="first-menu" data-id="title">
+                    <div class="first-menu-item">
+                        <img src="./static/images/menu/img_wd.png">标题类型
+                    </div>
+                    <div id="second-menu-title" class="second-panel">
+                        <h4>标题类型</h4>
+                        <ul id="second-menu" class="second-menu-wrap">
+                            <li>
+                                <a data-id="title_font" class="second-menu-item" title="文字标题" href="javascript:;" hidefocus="hidefocus">文字标题</a>
+                            </li>
+                            <li>
+                                <a data-id="title_img" class="second-menu-item" title="图文标题" href="javascript:;" hidefocus="hidefocus">图文标题</a>
+                            </li>
+                            <li>
+                                <a data-id="title_double" class="second-menu-item" title="双行标题" href="javascript:;" hidefocus="hidefocus">双行标题</a>
+                            </li>
+                            <li>
+                                <a data-id="title_btn" class="second-menu-item" title="标题右侧有按钮" href="javascript:;" hidefocus="hidefocus">标题右侧有按钮</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            <li class="first-menu" data-id="table">
+                <div class="first-menu-item" data-id="table">
+                    <img src="./static/images/menu/img_b.gif">表格类型
+                </div>
+                <div id="second-menu-table" class="second-panel">
+                    <h4>表格类型</h4>
+                    <ul id="second-menu-table" class="second-menu-wrap">
+                        <li>
+                            <a data-id="table_s" class="second-menu-item" title="最小表格" href="javascript:;" hidefocus="hidefocus">最小表格</a>
+                        </li>
+                        <li>
+                            <a data-id="table_form" class="second-menu-item" title="表单表格" href="javascript:;" hidefocus="hidefocus">表单表格</a>
+                        </li>
+                        <li>
+                            <a data-id="table_m" class="second-menu-item" title="普通表格" href="javascript:;" hidefocus="hidefocus">普通表格</a>
+                        </li>
+                        <li>
+                            <a data-id="table_l" class="second-menu-item" title="较大表格" href="javascript:;" hidefocus="hidefocus">较大表格</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li class="first-menu" data-id="way">
+                    <div class="first-menu-item">
+                        <img src="./static/images/menu/img_wd.png">表单类型
+                    </div>
+                    <div id="second-menu-way" class="second-panel">
+                        <h4>考核办法定义</h4>
+                        <ul id="second-menu" class="second-menu-wrap">
+                            <li>
+                                <a data-id="way1" class="second-menu-item" title="指示及权重" href="javascript:;" hidefocus="hidefocus">指示及权重</a>
+                            </li>
+                            <li>
+                                <a data-id="way2" class="second-menu-item" title="测试主体权重" href="javascript:;" hidefocus="hidefocus">测试主体权重</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            <li class="first-menu" data-id="column">
+                <div class="first-menu-item">
+                    <img src="./static/images/menu/img_q.gif">左右布局
+                </div>
+                <div id="second-menu-column" class="second-panel">
+                    <h4>左右布局</h4>
+                    <ul id="second-menu-column" class="second-menu-wrap">
+                        <li>
+                            <a data-id="column2" class="second-menu-item" title="左右布局" href="javascript:;" hidefocus="hidefocus">左右布局</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="first-menu" data-id="analysis">
+                <div class="first-menu-item">
+                    <img src="./static/images/menu/img_f.gif">上下布局
+                </div>
+                <div id="second-menu-analysis" class="second-panel">
+                    <h4>分析应用</h4>
+                    <ul id="second-menu-analysis" class="second-menu-wrap">
+                        <li>
+                            <a data-id="analysis1" class="second-menu-item" title="计算执行" href="javascript:;" hidefocus="hidefocus">计算执行</a>
+                        </li>
+                        <li>
+                            <a data-id="analysis2" class="second-menu-item" title="统计报表" href="javascript:;" hidefocus="hidefocus">统计报表</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="first-menu" data-id="setting">
+                <div class="first-menu-item">
+                    <img src="./static/images/menu/img_y.gif">菜单导航1
+                </div>
+                <div id="second-menu-setting" class="second-panel">
+                    <h4>系统管理</h4>
+                    <ul data-id="second-menu-setting" class="second-menu-wrap">
+                        <li>
+                            <a data-id="setting1" class="second-menu-item" title="数据库导出" href="javascript:;" hidefocus="hidefocus">数据库导出</a>
+                        </li>
+                        <li>
+                            <a data-id="setting2" class="second-menu-item" title="数据库导入" href="javascript:;" hidefocus="hidefocus">数据库导入</a>
+                        </li>
+                        <li>
+                            <a data-id="setting3" class="second-menu-item" title="系统初始化" href="javascript:;" hidefocus="hidefocus">系统初始化</a>
+                        </li>
+                        <li>
+                            <a data-id="setting4" class="second-menu-item" title="清除计算缓存" href="javascript:;" hidefocus="hidefocus">清除计算缓存</a>
+                        </li>
+                        <li>
+                            <a data-id="setting5" class="second-menu-item" title="修改密码" href="javascript:;" hidefocus="hidefocus">修改密码</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="first-menu" data-id="test">
+                <div class="first-menu-item">
+                    <img src="./static/images/menu/img_f.gif">页面示例
+                </div>
+                <div id="second-menu-test" class="second-panel">
+                    <h4>页面示例</h4>
+                    <ul data-id="second-menu-analysis" class="second-menu-wrap">
+                        <li>
+                            <a data-id="date" class="second-menu-item" title="日期组件" href="javascript:;" hidefocus="hidefocus">日期组件</a>
+                        </li>
+                        <li>
+                            <a data-id="form" class="second-menu-item" title="表单" href="javascript:;" hidefocus="hidefocus">表单</a>
+                        </li>
+                        <li>
+                            <a data-id="select" class="second-menu-item" title="选人组件" href="javascript:;" hidefocus="hidefocus">选人组件</a>
+                        </li>
+                        <li>
+                            <a data-id="column2" class="second-menu-item" title="两列布局" href="javascript:;" hidefocus="hidefocus">两列布局</a>
+                        </li>
+                        <li>
+                            <a data-id="cascade" class="second-menu-item" title="级联选择" href="javascript:;" hidefocus="hidefocus">级联选择</a>
+                        </li>
+                        <li>
+                            <a data-id="table" class="second-menu-item" title="表格" href="javascript:;" hidefocus="hidefocus">表格</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 右侧主要内 -->
+    <div id="main">
+        <iframe src="table_s.html" id="index" border="0" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" style="width:100%;height:100%;"></iframe>
+    </div>
+</body>
+
+</html>xiao

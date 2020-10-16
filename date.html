@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]> <html class="ie6 lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 6 ]> <html class="lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 7 ]> <html class="lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 8 ]> <html class="lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 9 ]> <html class="lte_ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日历组件</title>
+    <link href="./static/libs/bootstrap2.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="./static/libs/jquery1.12/jquery1.12.4.min.js"></script>
+    <script src="./static/libs/DatePicker/WdatePicker.js"></script>
+    <script src="./static/td/module.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <h2>日历组件</h2>
+    <div>
+        基本用法：
+        <input id="" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})" />
+        <br /> 只能选择今天以前的日期：
+        <input id="" type="text" onfocus="WdatePicker({readOnly:true,maxDate:'%y-%M-%d'})" />
+        <br /> 使用运算表达式 只能选择 20小时前 至 30小时后 的日期
+        <input id="" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',minDate:'%y-%M-%d {%H-20}:%m:%s',maxDate:'%y-%M-%d {%H+30}:%m:%s'})"
+        />
+        <br /> 开始日期：
+        <input id="sdate" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,maxDate:'#F{$dp.$D(\'edate\')}'})"
+        /> 结束日期:
+        <input id="edate" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,minDate:'#F{$dp.$D(\'sdate\')}',startDate:'#F{$dp.$D(\'sdate\',{d:+1})}'})"
+        />
+        <br />
+        <p>
+            <a href="http://my97.net/demo/index.htm">具体使用方法</a>
+        </p>
+    </div>    
+</body>
+
+</html>

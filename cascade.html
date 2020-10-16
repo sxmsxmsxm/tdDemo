@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]> <html class="ie6 lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 6 ]> <html class="lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 7 ]> <html class="lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 8 ]> <html class="lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 9 ]> <html class="lte_ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>级联选择</title>
+    
+    <link href="./static/libs/bootstrap2.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="./static/libs/jquery1.12/jquery1.12.4.min.js"></script>
+    <script src="./static/libs/distpicker/distpicker.js"></script>
+</head>
+
+<body>
+    <div>
+        <button class="btn btn-primary" id="reset" type="button">重置</button>
+        <button class="btn btn-warning" id="reset-deep" type="button">深度重置</button>
+        <button class="btn btn-danger" id="destroy" type="button">销毁</button>
+    </div>
+    <div id="distpicker">
+        <select></select>
+        <select></select>
+        <select></select>
+    </div>
+    <p><a href="https://fengyuanchen.github.io/distpicker/">具体使用方法</a></p>
+    <script>
+        $(document).ready(function () {
+            var $distpicker = $('#distpicker');
+
+            $distpicker.distpicker({
+                province: '福建省',
+                city: '厦门市',
+                district: '思明区'
+            });
+
+            $('#reset').click(function () {
+                $distpicker.distpicker('reset');
+            });
+
+            $('#reset-deep').click(function () {
+                $distpicker.distpicker('reset', true);
+            });
+
+            $('#destroy').click(function () {
+                $distpicker.distpicker('destroy');
+            });
+        });
+    </script>
+</body>
+
+</html>

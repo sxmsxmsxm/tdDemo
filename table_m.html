@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]> <html class="ie6 lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 6 ]> <html class="lte_ie6 lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 7 ]> <html class="lte_ie7 lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 8 ]> <html class="lte_ie8 lte_ie9"> <![endif]-->
+<!--[if lte IE 9 ]> <html class="lte_ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>普通表格示例</title>
+    <link href="./static/libs/bootstrap2.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./static/css/basic.css" rel="stylesheet" type="text/css">
+    <script src="./static/libs/jquery1.12/jquery1.12.4.min.js"></script>
+    <script src="./static/libs/bootstrap2.3.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h2 class="big3">普通表格示例</h2>
+    <table class="TableList" width="80%" align="center">
+        <tbody>
+            <tr class="TableHeader">
+                <td nowrap="" align="center">序号</td>
+                <td nowrap="" align="center">讨论区</td>
+                <td nowrap="" align="center">开放范围</td>
+                <td nowrap="" align="center">审核</td>
+                <td nowrap="" align="center">发帖</td>
+                <td nowrap="" align="center">版主</td>
+                <td nowrap="" align="center">操作</td>
+            </tr>
+
+            <tr class="TableLine1">
+                <td align="center">1</td>
+                <td align="center">学习园地</td>
+                <td style="cursor:hand" title="部门：全体部门">
+                    <font color="#0000FF"><b>部门：</b></font>全体部门<br></td>
+
+                <td align="center">不需审核</td>
+                <td align="center">允许匿名</td>
+                <td align="left">系统管理员</td>
+                <td nowrap="" align="center">
+                    <a href="edit.php?BOARD_ID=1&amp;IS_MAIN=">编辑</a>
+                    <a href="javascript:delete_board(1);">删除</a></td>
+            </tr>
+            <tr class="TableLine2">
+                <td align="center">2</td>
+                <td align="center">技术沟通</td>
+                <td style="cursor:hand" title="部门：全体部门">
+                    <font color="#0000FF"><b>部门：</b></font>全体部门<br></td>
+
+                <td align="center">不需审核</td>
+                <td align="center">允许匿名</td>
+                <td align="left">系统管理员</td>
+                <td nowrap="" align="center">
+                    <a href="edit.php?BOARD_ID=2&amp;IS_MAIN=">编辑</a>
+                    <a href="javascript:delete_board(2);">删除</a></td>
+            </tr>
+            <tr class="TableLine1">
+                <td align="center">3</td>
+                <td align="center">意见建议</td>
+                <td style="cursor:hand" title="部门：全体部门">
+                    <font color="#0000FF"><b>部门：</b></font>全体部门<br></td>
+
+                <td align="center">不需审核</td>
+                <td align="center">允许匿名</td>
+                <td align="left">系统管理员</td>
+                <td nowrap="" align="center">
+                    <a href="edit.php?BOARD_ID=3&amp;IS_MAIN=">编辑</a>
+                    <a href="javascript:delete_board(3);">删除</a></td>
+            </tr>
+            <tr class="TableLine2">
+                <td align="center">4</td>
+                <td align="center">七嘴八舌</td>
+                <td style="cursor:hand" title="部门：全体部门">
+                    <font color="#0000FF"><b>部门：</b></font>全体部门<br></td>
+
+                <td align="center">不需审核</td>
+                <td align="center">允许匿名</td>
+                <td align="left">系统管理员</td>
+                <td nowrap="" align="center">
+                    <a href="edit.php?BOARD_ID=4&amp;IS_MAIN=">编辑</a>
+                    <a href="javascript:delete_board(4);">删除</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
